@@ -41,6 +41,7 @@ nav_order: 4
 ## 1. Basic “Hello, Pyjinn!” Message
 
 Displays text in the Minecraft chat.
+❗- Including "#!python" at the top of the first line of a .pyj file will tell IDEs such as VSCode to treat this as a python file. Similarly, while all minescript imports are included in .pyj files by default, including "from minescript import *" tells your IDE to search for this module.
 
 ```python
 #!python
