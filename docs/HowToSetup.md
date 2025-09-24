@@ -132,3 +132,16 @@ You can run your `.py` scripts directly in Minecraft via the chat console:
 3. Example output: `/usr/bin/python3`
 
 *Note: `which python` may show Python 2.*
+
+## Post-install help
+
+### I'm running a library and it gives a class not found exception.
+These exceptions are commonly raised for the first time in libraries such as `minescript_plus` whenever you have a fresh install of minescript. To fix this error, simply tpye `\download_mappings` and then `\reload_mappings` into the chat.
+(Pyjinn scripts can use special functions to hook into minecraft internals, but they require mappings that are not shipped at base with minescript. Performing these commands will download them from the official mojang site and make the script work.)
+
+### Where do I put my python scripts? Libraries?
+You can put all of your python scripts, libraries, and whatever else you might have into the `.minecraft/minescript` directory. Any scripts placed in `system` may be wiped whenever you update your mod, and any scripts not inside of minescript likely will not execute.
+
+### General Python Debugging
+1. Make sure that you have actually installed python to PATH, and not just downloaded it.
+2. Exited with error code 9009 - You have to install python. If you have python but know that it's only not working in minescript, make sure your python path in `config.txt` is correct.
